@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Diary</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    #diarySection {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+
+<div class="container">
+
+    <h1>📔 Digital Diary</h1>
+
+    <!-- LOGIN ONLY -->
+    <div class="card">
+
+        <h2>Login to Your Diary</h2>
+
+        <input type="password" id="pin" placeholder="Enter PIN">
+
+        <button onclick="login()">Login</button>
+
+    </div>
+
+    <!-- DIARY -->
+    <div id="diarySection">
+
+        <div class="stats">
+            <h3>Total Diaries Saved: <span id="count">0</span></h3>
+        </div>
+
+        <div class="card">
+
+            <h2>Write Diary</h2>
+
+            <input type="text" id="username" placeholder="Enter username">
+            <input type="date" id="date">
+
+            <textarea id="content" rows="6" placeholder="Write your diary..."></textarea>
+
+            <button onclick="saveEntry()">Save Diary</button>
+
+        </div>
+
+        <h2>📚 Saved Diaries</h2>
+
+        <div id="entries"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
